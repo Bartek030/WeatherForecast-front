@@ -12,5 +12,9 @@ button {
 
 .mainTitle {
     font-size: 10rem;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Dancing Script", cursive;
+}
+
+#description::first-letter {
+    text-transform: capitalize;
 }
