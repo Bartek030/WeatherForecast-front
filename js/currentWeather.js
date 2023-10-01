@@ -10,10 +10,9 @@ let generateCurrentWeatherCard = function (cityName, lang, units) {
         url: url,
         type: 'GET'
     }).done(function (data) {
-        console.log(data);
         populateCurrentWeatherWidget(data);
     }).fail(function () {
-        // TODO: ERROR HANDLING
+        alert("Nie udało się pobrać danych");
     });
 };
 
@@ -27,6 +26,8 @@ let populateCurrentWeatherWidget = function(data) {
     let pressure = data.main.pressure + ' hPa';
     let humidity = data.main.humidity + '%';
     let wind = data.wind.speed + 'm/s';
+
+    $('.mainBox').removeAttr('hidden');
 
     $('#currentImage').attr('src', iconUrl);
     $('#description').html(description);

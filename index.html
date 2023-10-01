@@ -73,8 +73,9 @@
                     Szukaj
                 </button>
             </div>
-            <div class="h3 text-center mb-4">Aktualna pogoda</div>
-            <div class="mainBox">
+            
+            <div class="mainBox" hidden>
+                <div class="h3 text-center mb-4" id="currentTitle">Aktualna pogoda</div>
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -89,9 +90,18 @@
                                 <h5 class="card-title h2" id="description"></h5>
                                 <p class="card-text h4" id="temperature"></p>
                                 <p class="card-text">
-                                    <small class="text-muted" id="feels_like"></small>
-                                    <small class="text-muted" id="temp_max"></small>
-                                    <small class="text-muted" id="temp_min"></small>
+                                    <small
+                                        class="text-muted"
+                                        id="feels_like"
+                                    ></small>
+                                    <small
+                                        class="text-muted"
+                                        id="temp_max"
+                                    ></small>
+                                    <small
+                                        class="text-muted"
+                                        id="temp_min"
+                                    ></small>
                                 </p>
                                 <p class="card-text h4" id="pressure"></p>
                                 <p class="card-text h4" id="humidity"></p>
@@ -101,30 +111,17 @@
                     </div>
                 </div>
                 <div class="h3 text-center mt-3 mb-4">Prognoza 7-dniowa</div>
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img
-                                src="..."
-                                class="img-fluid rounded-start"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                    content. This content is a little bit
-                                    longer.
-                                </p>
-                                <p class="card-text">
-                                    <small class="text-muted"
-                                        >Last updated 3 mins ago</small
-                                    >
-                                </p>
-                            </div>
+                <div class="d-flex mb-3" id="forecastBox">
+                    <div class="card" style="width: 18rem">
+                        <img src="..." class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
