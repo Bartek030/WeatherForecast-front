@@ -23,7 +23,3 @@ body {
     display: flex;
     position: relative;
 }
-
-.borderCheck{ 
-    border: 1px white solid;
-}

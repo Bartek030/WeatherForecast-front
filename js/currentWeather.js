@@ -25,7 +25,7 @@ let populateCurrentWeatherWidget = function(data) {
     let tempMin = data.main.temp_min.toFixed(1) + '&#8451;';
     let pressure = data.main.pressure + ' hPa';
     let humidity = data.main.humidity + '%';
-    let wind = data.wind.speed + 'm/s';
+    let wind = data.wind.speed + ' m/s';
 
     $('.mainBox').removeAttr('hidden');
 
@@ -37,6 +37,5 @@ let populateCurrentWeatherWidget = function(data) {
     $('#temp_min').html('Minimalna: ' + tempMin);
     $('#pressure').html('Ciśnienie: ' + pressure);
     $('#humidity').html('Wilgotność: ' + humidity);
-    $('#wind').html('Wilgotność: ' + wind);
+    $('#wind').html('Wiatr: ' + wind);
 };
-
