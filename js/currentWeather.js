@@ -18,6 +18,7 @@ let generateCurrentWeatherCard = function (cityName, lang, units) {
 };
 
 let populateCurrentWeatherWidget = function(data) {
+    let iconUrl = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
     let description = data.weather[0].description;
     let temperature = data.main.temp.toFixed(1) + '&#8451;';
     let feelsLike = data.main.feels_like.toFixed(1) + '&#8451;';
@@ -27,7 +28,7 @@ let populateCurrentWeatherWidget = function(data) {
     let humidity = data.main.humidity + '%';
     let wind = data.wind.speed + 'm/s';
 
-
+    $('#currentImage').attr('src', iconUrl);
     $('#description').html(description);
     $('#temperature').html('Temperatura: ' + temperature);
     $('#feels_like').html('Odczuwalna: ' + feelsLike);

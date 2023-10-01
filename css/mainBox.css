@@ -18,3 +18,7 @@ button {
 #description::first-letter {
     text-transform: capitalize;
 }
+
+.card {
+    background-color: #bbbbbb;
+}
