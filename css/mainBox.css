@@ -15,6 +15,10 @@ button {
     font-family: "Dancing Script", cursive;
 }
 
-#description::first-letter {
+#description::first-letter, .card-desc::first-letter {
     text-transform: capitalize;
+}
+
+.card {
+    background-color: #ff9900;
 }

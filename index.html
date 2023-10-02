@@ -39,19 +39,6 @@
     </head>
 
     <body>
-        <!-- <nav>
-            <div class="sidebar-top mx-auto">
-                <h3>Prognoza Pogody</h3>
-            </div>
-
-            <div class="sidebar-links">
-                <ul>
-                    <li>Aktualna Pogoda</li>
-                    <li>Prognoza 7-dniowa</li>
-                </ul>
-            </div>
-        </nav> -->
-
         <main>
             <div class="input-group mb-5">
                 <input
@@ -86,8 +73,9 @@
                     Szukaj
                 </button>
             </div>
-            <div class="h3 text-center mb-4">Aktualna pogoda</div>
-            <div class="mainBox">
+            
+            <div class="mainBox" hidden>
+                <div class="h3 text-center mb-4" id="currentTitle"></div>
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -95,6 +83,7 @@
                                 id="currentImage"
                                 class="img-fluid rounded-start"
                                 alt="no-image"
+                                style="height: 18rem;"
                             />
                         </div>
                         <div class="col-md-8">
@@ -102,48 +91,28 @@
                                 <h5 class="card-title h2" id="description"></h5>
                                 <p class="card-text h4" id="temperature"></p>
                                 <p class="card-text">
-                                    <small class="text-muted" id="feels_like"></small>
-                                    <small class="text-muted" id="temp_max"></small>
-                                    <small class="text-muted" id="temp_min"></small>
+                                    <small
+                                        class="text-muted"
+                                        id="feels_like"
+                                    ></small>
+                                    <small
+                                        class="text-muted"
+                                        id="temp_max"
+                                    ></small>
+                                    <small
+                                        class="text-muted"
+                                        id="temp_min"
+                                    ></small>
                                 </p>
                                 <p class="card-text h4" id="pressure"></p>
                                 <p class="card-text h4" id="humidity"></p>
                                 <p class="card-text h4" id="wind"></p>
-                                <p class="card-text h4">
-                                    Wschód, Zachów
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="h3 text-center mt-3 mb-4">Prognoza 7-dniowa</div>
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img
-                                src="..."
-                                class="img-fluid rounded-start"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                    content. This content is a little bit
-                                    longer.
-                                </p>
-                                <p class="card-text">
-                                    <small class="text-muted"
-                                        >Last updated 3 mins ago</small
-                                    >
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="h3 text-center mt-3 mb-4">Prognoza 5-dniowa</div>
+                <div class="d-flex mb-3 flex-wrap justify-content-center" id="forecastBox"></div>
             </div>
 
             <footer>
