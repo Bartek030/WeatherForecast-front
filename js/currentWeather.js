@@ -10,6 +10,7 @@ let generateCurrentWeatherCard = function (cityName, lang, units) {
         url: url,
         type: 'GET'
     }).done(function (data) {
+        console.log(data);
         populateCurrentWeatherWidget(data);
     }).fail(function () {
         alert("Nie udało się pobrać danych");
@@ -28,6 +29,8 @@ let populateCurrentWeatherWidget = function(data) {
     let wind = data.wind.speed + ' m/s';
 
     $('.mainBox').removeAttr('hidden');
+
+    $('#currentTitle').html('Aktualna pogoda dla: ' + data.name);
 
     $('#currentImage').attr('src', iconUrl);
     $('#description').html(description);

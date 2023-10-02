@@ -1,4 +1,3 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");*/
 @import "mainBox.css";
 @import "footer.css";
 
@@ -16,7 +15,7 @@
 }
 
 body {
-    background-image: url("../resources/img/background.png");
+    background-image: url("../resources/img/background.jpg");
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
     min-height: 100vh;
